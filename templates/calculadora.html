@@ -1,0 +1,41 @@
+{{define "Calculadora"}}
+
+<div class="container">
+    <form method="POST" action="calcular">
+        <input type="hidden" name="id" value="{{.Id}}" >
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="tempoVolta">Tempo Volta:</label>
+                    <input type="text" name="tempoVolta" placeholder="2:03" class="form-control" value="{{.TempoVolta}}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="duracao">Duração Minutos:</label>
+                    <input type="number" name="duracao" placeholder="50" class="form-control" value="{{.Duracao}}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="consumoVolta">Consumo Volta:</label>
+                    <input type="text" name="consumoVolta" placeholder="1.50" class="form-control" value="{{.ConsumoVolta}}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="maisUmaVolta">Mais Uma Volta:</label>
+                <input type="checkbox" name="maisUmaVoltaCheck" value="maisUmaVolta" value="{{.MaisUmaVolta}}">
+            </div>
+        </div>
+        <button type="submit" value="calcular" class="btn btn-success">Calcular</button>
+    </form>
+    
+</div>
+
+{{end}}

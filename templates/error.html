@@ -1,0 +1,15 @@
+{{define "Error"}}
+
+{{template "_head"}}
+
+{{template "_menu"}}
+
+<body>
+<div class="container">
+    <div class="alert alert-danger" role="alert">Erro: {{.Mensagem}}</div>
+    <div class="row"><a class="btn btn-info" href="{{.Href}}">Voltar</a></div>
+</div>
+</body>
+
+</html>
+{{end}}
